@@ -1,0 +1,125 @@
+╔══════════════════════════════════════════════════════════════╗
+║           F1 2D RACING GAME - QUICK REFERENCE                ║
+╚══════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────┐
+│  🎮 CONTROLS                                                 │
+├─────────────────────────────────────────────────────────────┤
+│  Player 1                    Player 2 (Local Multiplayer)   │
+│  ─────────                   ───────────────────────────    │
+│  ↑   Accelerate              W   Accelerate                 │
+│  ↓   Brake                   S   Brake                      │
+│  ←   Turn Left               A   Turn Left                  │
+│  →   Turn Right              D   Turn Right                 │
+│  Space  Use Power-up         Shift  Use Power-up            │
+│                                                              │
+│  General: ESC = Pause  |  R = Restart                       │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  🎁 POWER-UPS                                                │
+├─────────────────────────────────────────────────────────────┤
+│  ⚡ BOOST      +50% speed for 2 seconds                     │
+│  🛡️ SHIELD     Invulnerability for 5 seconds                │
+│  💧 OIL        Drop oil slick to spin opponents             │
+│  ⚠️ EMP        Stun nearby cars for 3 seconds               │
+│  ↑ TELEPORT   Skip ahead 200 pixels                         │
+│  👻 GHOST      Phase through cars for 3 seconds             │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  🏁 TRACKS                                                   │
+├─────────────────────────────────────────────────────────────┤
+│  Monaco          ⭐⭐☆☆☆  Tight corners                     │
+│  Silverstone     ⭐⭐⭐☆☆  Fast flowing                      │
+│  Monza           ⭐⭐☆☆☆  High speed                         │
+│  Suzuka          ⭐⭐⭐⭐☆  Technical                         │
+│  Spa             ⭐⭐⭐⭐⭐  Expert level                      │
+│  Random          Variable  Procedural                        │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  🚀 QUICK START                                              │
+├─────────────────────────────────────────────────────────────┤
+│  1. Open index.html in browser                              │
+│  2. Select game mode                                         │
+│  3. Choose track                                             │
+│  4. Select team                                              │
+│  5. Wait for countdown                                       │
+│  6. RACE!                                                    │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  🌐 MULTIPLAYER SETUP                                        │
+├─────────────────────────────────────────────────────────────┤
+│  Host:                       Join:                           │
+│  1. npm install              1. Get room code from host     │
+│  2. npm start (server)       2. Click "Join Room"           │
+│  3. npm run serve (game)     3. Enter code                  │
+│  4. Create room              4. Click Ready                  │
+│  5. Share code               5. Wait for host to start      │
+│  6. Start when ready                                         │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  💡 PRO TIPS                                                 │
+├─────────────────────────────────────────────────────────────┤
+│  • Brake BEFORE corners, not during                         │
+│  • Use power-ups strategically, not immediately             │
+│  • Stay on track - grass slows you down                     │
+│  • Watch minimap for positioning                            │
+│  • Drift by holding brake + turn                            │
+│  • Save boost for straights                                 │
+│  • Complete all checkpoints or lap won't count              │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  📊 HUD ELEMENTS                                             │
+├─────────────────────────────────────────────────────────────┤
+│  Top Left:      Position (1st, 2nd, etc.)                   │
+│  Top Center:    Current Lap / Total Laps                    │
+│  Top Right:     Minimap                                      │
+│  Bottom Left:   Speed (km/h)                                │
+│  Bottom Right:  Lap Time                                     │
+│  Bottom Center: Active Power-up                             │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  ⚙️ TECH SPECS                                               │
+├─────────────────────────────────────────────────────────────┤
+│  Max Speed:       300 px/s (~108 km/h)                      │
+│  Acceleration:    50 px/s²                                  │
+│  Brake Force:     150 px/s²                                 │
+│  Turn Rates:      1.5° - 5° per frame (speed dependent)    │
+│  Target FPS:      60                                         │
+│  Max Players:     8 (online)                                │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  🏎️ F1 TEAMS                                                 │
+├─────────────────────────────────────────────────────────────┤
+│  Ferrari (#16)        Red                                    │
+│  Red Bull (#1)        Blue                                   │
+│  Mercedes (#44)       Teal                                   │
+│  McLaren (#4)         Orange                                 │
+│  Alpine (#10)         Blue                                   │
+│  Aston Martin (#14)   Green                                  │
+│  Williams (#23)       Blue                                   │
+│  AlphaTauri (#22)     Navy                                   │
+│                                                              │
+│  * All teams have equal performance                         │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  🐛 TROUBLESHOOTING                                          │
+├─────────────────────────────────────────────────────────────┤
+│  Game not loading:       Clear cache (Ctrl+F5)              │
+│  Controls not working:   Click on canvas first              │
+│  Low FPS:                Close other tabs                   │
+│  Multiplayer fails:      Check server is running            │
+│  Room not found:         Verify 6-character code            │
+└─────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════╗
+║  Have fun and race hard! 🏁                                  ║
+╚══════════════════════════════════════════════════════════════╝

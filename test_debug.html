@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Test</title>
+    <style>
+        body { margin: 0; background: #000; color: #fff; font-family: monospace; }
+        #log { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div id="log">Loading scripts...<br></div>
+    <script>
+        function log(msg) {
+            document.getElementById('log').innerHTML += msg + '<br>';
+        }
+        
+        window.addEventListener('error', function(e) {
+            log('ERROR: ' + e.message + ' at ' + e.filename + ':' + e.lineno);
+        });
+        
+        log('Starting script load...');
+    </script>
+    <script src="js/utils/constants.js" onerror="log('FAILED: constants.js')"></script>
+    <script>log('Loaded: constants.js');</script>
+    <script src="js/utils/helpers.js" onerror="log('FAILED: helpers.js')"></script>
+    <script>log('Loaded: helpers.js');</script>
+    <script src="js/core/Vector2D.js" onerror="log('FAILED: Vector2D.js')"></script>
+    <script>log('Loaded: Vector2D.js');</script>
+    <script src="js/core/Car.js" onerror="log('FAILED: Car.js')"></script>
+    <script>log('Loaded: Car.js');</script>
+    <script src="js/core/Track.js" onerror="log('FAILED: Track.js')"></script>
+    <script>log('Loaded: Track.js');</script>
+    <script src="js/core/PowerUp.js" onerror="log('FAILED: PowerUp.js')"></script>
+    <script>log('Loaded: PowerUp.js');</script>
+    <script src="js/core/Camera.js" onerror="log('FAILED: Camera.js')"></script>
+    <script>log('Loaded: Camera.js');</script>
+    <script src="js/core/CollisionDetector.js" onerror="log('FAILED: CollisionDetector.js')"></script>
+    <script>log('Loaded: CollisionDetector.js');</script>
+    <script src="js/managers/InputManager.js" onerror="log('FAILED: InputManager.js')"></script>
+    <script>log('Loaded: InputManager.js');</script>
+    <script src="js/managers/AudioManager.js" onerror="log('FAILED: AudioManager.js')"></script>
+    <script>log('Loaded: AudioManager.js');</script>
+    <script src="js/managers/UIManager.js" onerror="log('FAILED: UIManager.js')"></script>
+    <script>log('Loaded: UIManager.js');</script>
+    <script src="js/managers/NetworkManager.js" onerror="log('FAILED: NetworkManager.js')"></script>
+    <script>log('Loaded: NetworkManager.js');</script>
+    <script src="js/game/GameState.js" onerror="log('FAILED: GameState.js')"></script>
+    <script>log('Loaded: GameState.js');</script>
+    <script src="js/game/Game.js" onerror="log('FAILED: Game.js')"></script>
+    <script>log('Loaded: Game.js');</script>
+    <script src="js/main.js" onerror="log('FAILED: main.js')"></script>
+    <script>log('Loaded: main.js');</script>
+    <script>
+        log('All scripts loaded successfully!');
+        log('Testing Game instantiation...');
+        try {
+            const testGame = new Game();
+            log('SUCCESS: Game object created!');
+        } catch(e) {
+            log('ERROR creating Game: ' + e.message);
+        }
+    </script>
+</body>
+</html>

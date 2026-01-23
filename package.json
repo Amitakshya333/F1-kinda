@@ -1,0 +1,28 @@
+{
+  "name": "f1-2d-racing-game",
+  "version": "1.0.0",
+  "description": "2D top-down F1 racing game with multiplayer support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "serve": "node serve.js",
+    "game": "start http://localhost:8080 && node serve.js"
+  },
+  "keywords": [
+    "game",
+    "f1",
+    "racing",
+    "multiplayer",
+    "2d",
+    "canvas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

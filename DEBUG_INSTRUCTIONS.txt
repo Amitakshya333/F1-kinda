@@ -1,0 +1,13 @@
+HOW TO DEBUG:
+
+1. Open the game in browser (index.html)
+2. Press F12 to open Developer Tools
+3. Go to the "Console" tab
+4. Click Single Player → Select Track → Select Team
+5. Look at the console messages to see:
+   - "Race started!"
+   - "Render called - track: true/false cars: X running: true/false"
+   - "Track.draw called - waypoints: X camera: X Y"
+
+If you see errors in red, please share them!
+If nothing appears in console, the game might not be starting at all.
