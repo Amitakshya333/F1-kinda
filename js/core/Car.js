@@ -201,7 +201,10 @@ class Car {
     }
     
     collectPowerUp(type) {
-        this.currentPowerUp = type;
+        // Bug 3 fix: don't overwrite an already held power-up
+        if (!this.currentPowerUp) {
+            this.currentPowerUp = type;
+        }
     }
     
     handleCollision(wall = false) {
@@ -341,6 +344,7 @@ class Car {
             ctx.beginPath();
             ctx.arc(0, 0, this.width * 0.7, 0, Math.PI * 2);
             ctx.stroke();
+            ctx.setLineDash([]); // Bug 2 fix: reset dash before restore
             ctx.restore();
         }
         
@@ -390,6 +394,16 @@ class Car {
         gradient.addColorStop(0.5, 'rgba(255,255,255,0.1)');
         gradient.addColorStop(1, 'rgba(0,0,0,0.3)');
         ctx.fillStyle = gradient;
+        // Bug 1 fix: re-issue the body path before filling with gradient
+        ctx.beginPath();
+        ctx.moveTo(w/2 + 5, 0);
+        ctx.lineTo(w/4, -h/4);
+        ctx.lineTo(0, -h/2 + 2);
+        ctx.lineTo(-w/2 + 5, -h/2 + 4);
+        ctx.lineTo(-w/2 + 5, h/2 - 4);
+        ctx.lineTo(0, h/2 - 2);
+        ctx.lineTo(w/4, h/4);
+        ctx.closePath();
         ctx.fill();
 
         // Front Wing
